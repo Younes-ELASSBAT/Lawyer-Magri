@@ -10,6 +10,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="stylesheet" href="../css/landingpage.css">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/book.css"> <!-- Add custom CSS for booking -->
   <link rel="icon" href="../img/favicon.jpg">
   <title>Book Your Appointment</title>
 </head>
@@ -18,7 +19,7 @@
   <header>
     <nav class="navbar">
         <div class="container">
-                <img src="../img/logoheader.png"  width="80" height="80" alt="logo">
+                <img src="../img/logo-nav.png"  width="80" height="80" alt="logo">
             <div class="nav-bar">
                 <ul>
                     <li><a href="../index.html" class="active">Home</a></li>
@@ -62,71 +63,42 @@
       </div>
     </section>
   </div>
-<!-- FORM:client information  -->
-  <div class="container-fluid">
-    <section class="book text-center">
-      <h2 class="book-title">Book</h2>
-      <div class="container">
-          <form class="info form-group" id="form-info">
-            <div class="card ">
-              <div class="card-body flex-info-body">
-                    <label for="names" class="names" id="names">Full Name</label>
-                    <input type="text" value="" class="name form-control" id="fullname"><br>
-                    <label for="service" class="services" id = "services">Serivce</label>
-                    <select name="service" id="service" class="form-control">
-                      <option value=""></option>
-                      <option value="Divorce">Divorce</option>
-                       <option value="Family">Family</option>
-                      <option value="Personal Injury">Personal Injury</option>
-                      <option value="Labor Law">Labor Law</option>
-                      <option value="Commercial Law">Commercial Law</option>
-                      <option value="Criminal Law">Criminal Law</option>  
-                    </select>
-                    <label for="day">Appointment</label>
-                    <input  id = "get-date" type="date" name="birthday"  class= "form-control" placeholder="Enter Date" required>
-                    <label for="time">Time</label><br>
-                    <select name="time" id="time" class= "form-control">
-                      <option value="time"></option>
-                      <option value="8:00 a.m">8:00 a.m</option>
-                      <option value="9:00 a.m ">9:00 a.m </option>
-                      <option value="10:00 a.m">10:00 a.m </option>
-                      <option value="11:00 a.m">11:00 a.m </option>
-                      <option value="12:00 a.m">12:00 a.m </option>
-                      <option value="1:00 p.m">1:00 p.m </option>
-                      <option value="2:00 p.m ">2:00 p.m </option>
-                      <option value="3:00 p.m ">3:00 p.m </option>
-                      <option value="4:00 p.m">4:00 p.m </option>
-                      <option value="5:00 p.m">5:00 p.m</option>
-                      <option value="6:00 p.m ">6:00 p.m</option>
-                    </select>
-                    <label for="communication"class="communication">Communication</label>
-                    <select name="comm" id="comm" class= "form-control" >
-                        <option value=""></option>
-                        <option value="Google Meet">Google Meet</option>
-                        <option value="Zoom">Zoom</option>
-                        <option value="Phone Call">Phone Call</option>
-                    </select>
-                  <button name="info-btn" class="info-btn" id="info-btn" onclick="click" value="submit">Continue</button>
+<!--BOOKING FORM STARTS-->
+<section class="booking" id="booking">
+    <div class="container">
+        <h2 class="text-center mb-4">Book an Appointment</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow-sm p-4">
+                    <form id="booking-form">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="John Doe">
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                        </div>
+                        <div class="mb-3">
+                            <label for="phone" class="form-label">Phone Number</label>
+                            <input type="tel" class="form-control" id="phone" placeholder="+1234567890">
+                        </div>
+                        <div class="mb-3">
+                            <label for="date" class="form-label">Preferred Date</label>
+                            <input type="date" class="form-control" id="date">
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Book Appointment</button>
+                    </form>
                 </div>
-              </div>
-            </div> 
-          </form>
-       </div>
-<!-- Appointment date display  -->
-        <div class="container">
-          <div class="card ">
-            <div class="card-body message">
-              <div class="app-message">
-                <div id="show-app">
-                  <p class="message-text">Appointment: <span id="displayAppointment"></span></p>
-                  <p class="message-text">Mode of Communication: <span id="modeOfComm"></span></p>
-                  <p class="message-text">Service type: <span id="serviceType"></span></p>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-    </section>
+    </div>
+</section>
+<!--BOOKING FORM ENDS-->
 <!-- Price  -->
     <section class="price text-center">
       <div class="container">
@@ -163,13 +135,13 @@
                 <div class="footer-contact">
                     <h5>Get in Touch</h5>
                     <i class="bi-footer bi-telephone-fill"></i>
-                    <span>+254712345678<span>
+                    <span>+21268234136<span>
                     <br>
                     <i class="bi-footer bi-envelope-fill"></i>
-                    <span>haki@info.co.ke</span>
+                    <span>magriazzedine@gmail.com</span>
                     <br>
                     <i class="bi-footer bi-geo-alt"></i>
-                    <span>Ngong Lane, Nairobi.</span>
+                    <span>HAY BARAKA</span>
                 </div>
             </div>
             <div class="col-md-6 form-message">
@@ -185,7 +157,7 @@
             </div>
         </div>
         <div class="copy">
-          &copy; Haki 2021. All Rights Reserved.
+          &copy; MAGRI 2025. All Rights Reserved.
         </div>
       </div>
     </div>
